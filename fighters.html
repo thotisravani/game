@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIGHTERS</title>
+    <style>
+        #a,#b,#c,#d,#e{
+            background-position: center;
+            background-size: 200%;
+            background-repeat: no-repeat;
+        }
+        #a:hover,#b:hover,#c:hover,#d:hover,#e:hover{
+            background-size: 70%;
+            background-position: center;
+            height: 100%;
+            width: 100%;
+        }
+        #a{
+            background-image: url(https://rukminim2.flixcart.com/image/850/1000/khz693k0-0/book/v/j/r/mahatma-gandhi-original-imafxvcqdh6d262z.jpeg?q=20&crop=false);
+        }
+        #b{
+            background-image: url(https://www.historicnation.in/storage/2024/01/rani-lakshmibai-painting.jpg);
+        }
+        #c{
+            background-image: url(https://rukminim2.flixcart.com/image/850/1000/juh9ksw0/poster/m/n/d/large-pnf-20x28-9370-subhash-chandra-bose-uv-textured-water-original-imaffjmtpnhfamhd.jpeg?q=20&crop=false);
+        }
+        #d{
+            background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR446Tna2WWexNy9A64FxNRMsOLLZ739OaWQm5qkIkIeycimGxZ);
+        }
+        #e{
+            background-image: url(https://img.etimg.com/thumb/width-1200,height-1200,imgsize-6676,resizemode-75,msid-104008560/news/new-updates/remembering-bhagat-singh-here-are-some-least-known-things-about-the-indian-revolutionary.jpg);
+        }
+        .card p span{
+            min-width: 15rem;
+            padding:.8em;
+            text-align: center;
+            transform:rotate(-90degree);
+            text-transform: uppercase;
+            color: #ffff;
+            border: 4px solid pink;
+            letter-spacing: .1em;
+        }
+        .card p:hover span{
+            transform: rotate(0);
+        }
+        .card p:hover{
+            flex: 9;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <p><span id="a"></span></p>
+        <p><span id="b"></span></p>
+        <p><span id="c"></span></p>
+        <p><span id="d"></span></p>
+        <p><span id="e"></span></p>
+    </div>
+</body>
+</html>
