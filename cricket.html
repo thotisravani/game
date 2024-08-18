@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Stadium</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrollbars if the image is larger than the viewport */
+            font-family: Arial, sans-serif;
+        }
+        img {
+            position: absolute; /* Position image relative to the viewport */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh; /* Make the image cover the entire viewport height */
+            object-fit: cover; /* Ensure the image covers the area without distortion */
+            z-index: 0; /* Place the image behind other elements */
+        }
+        .name {
+            position: absolute; /* Position relative to the viewport */
+            top: 20px; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%); /* Center horizontally */
+            font-size: 50px; /* Adjust size as needed */
+            color: white; /* Ensure text is readable */
+            z-index: 1; /* Ensure the title is above the image */
+        }
+        div {
+            background-color: rgba(61, 49, 233, 0.7); /* Semi-transparent background */
+            height: 100px;
+            width: auto;
+            padding: 10px;
+            border-radius: 10px;
+            border:4px solid #ffff;
+            position: absolute; /* Position relative to the viewport */
+            top:40%;
+            left: 50%;
+            transform: translateX(-50%); /* Center horizontally */
+            text-align: center;
+            z-index: 1; /* Ensure the div is above the image */
+        }
+        h1 {
+            font-size: 48px;
+            margin: 0;
+            color: white; /* Ensure text is readable on the background */
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="name">ICC WORLD CUP 2024</h1>
+    <img src="https://www.shutterstock.com/image-illustration/grand-stadium-full-spectators-expecting-600nw-1762180874.jpg" alt="Cricket Stadium">
+    <div>
+        <h1 id="hrs">00:</h1>
+        <h1 id="min">00:</h1>
+        <h1 id="sec">00</h1>
+    </div>
+    <script>
+        let hrs = document.getElementById("hrs");
+        let min = document.getElementById("min");
+        let sec = document.getElementById("sec");
+
+        setInterval(() => {
+            let currentTime = new Date();
+            let hours = currentTime.getHours();
+            let minutes = currentTime.getMinutes();
+            let seconds = currentTime.getSeconds();
+
+            // Convert 24-hour format to 12-hour format
+            hours = hours % 12;
+            hours = hours || 12; // the hour '0' should be '12'
+            hours = (hours < 10 ? "0" : "") + hours;
+            minutes = (minutes < 10 ? "0" : "") + minutes;
+            seconds = (seconds < 10 ? "0" : "") + seconds;
+
+            hrs.innerHTML = hours + "hr:";
+            min.innerHTML = minutes + "min:";
+            sec.innerHTML = seconds + "sec";
+        }, 1000);
+    </script>
+</body>
+</html>
